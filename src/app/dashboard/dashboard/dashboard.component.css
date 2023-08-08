@@ -1,0 +1,68 @@
+.container-fluid {
+    position: relative;
+    text-align: center;
+    /* color: white; */
+}
+
+
+.image-container-fluid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    /* margin: 10px;
+    padding: 10px; */
+}
+
+.text p {
+    font-size: 18px;
+    left: 10%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: gray;
+}
+
+.search {
+    background: red;
+}
+
+.content-trending p {
+    margin-left: 20px;
+    display: flex;
+}
+
+.job {
+    display: flex;
+    font-size: 30px;
+    text-align: left;
+    margin: 10px;
+}
+
+.container-fluid .para {
+    display: flex !important;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 12px;
+    color: gray;
+}
+
+/* <!-- -------------------JOBPORTALS ------------------------> */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+  }
+  
+  
