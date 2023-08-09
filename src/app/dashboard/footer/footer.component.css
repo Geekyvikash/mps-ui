@@ -1,0 +1,20 @@
+
+.footer {
+    position: relative;
+    width: 100%; /* Occupy full width of the container */
+    height: 200px;
+    background-image: url("../../../assets/bg-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center bottom;
+}
+@media (max-width: 600px) {
+    .footer {
+        max-width: 600px;
+        margin: 0 auto; /* Center the footer horizontally */
+    }
+}
+/* .responsive {
+    width: 100%;
+    height: auto;
+  } */
