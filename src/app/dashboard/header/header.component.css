@@ -54,7 +54,7 @@ a {
 }
 
 /*  for submenu */
-.dropdown {
+.submenu-content {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -62,31 +62,10 @@ a {
     z-index: 1;
 }
 
-.dropdown:hover .dropdown {
+.submenu:hover .submenu-content {
     display: block;
 }
 
-ul li ul {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    transition: all 0.5s ease;
-    margin-top: 1rem;
-    left: 0;
-    display: none;
-  }
-  
-  ul li:hover > ul,
-  ul li ul:hover {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-  }
-  
-  ul li ul li {
-    clear: both;
-    width: 100%;
-  }
 .menu {
     list-style-type: none;
     padding: 0;
@@ -259,3 +238,84 @@ ul li ul {
         border-bottom: 1px solid #444;
     }
 }
+
+
+
+
+
+ /* Login 
+ Login 
+ Login 
+ Login  */
+
+.modal-header{
+    padding: 40px;
+    border: none;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.required{
+    color:red;
+}
+.cmb-th{
+    margin-bottom:10px;
+}
+.btn-contractor{
+    background-color: #34A853;
+    margin-left: 10%;
+    width: 35%;
+    border: none;
+    color: #f0f5f7;
+}
+
+.btn-employer{
+    background-color: #34A853;
+    margin-left: 10%;
+    width: 35%;
+    border: none;
+    color: #f0f5f7;
+}
+
+.regular-text{
+    height:56px;
+    background-color:#f0f5f7;
+    margin-left:0px;
+    outline:none;
+    border:none;
+    padding-left:10px;
+    border-radius: 10px;
+    margin-bottom:10px;
+}
+.register-btn{
+    background-color: #1967d2;
+    height:60px;
+    color: #f0f5f7;
+}
+.register-btn:hover{
+    background-color: #1451a4;
+}
+
+.login-info{
+    justify-content: center;
+    display: flex;
+    margin-top: 5%;
+}
+
+.apus{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Add this CSS to your stylesheet */
+.custom-modal-content {
+    width: 600px;
+    max-width: 100%;
+  }
+ 
+  .modal-content{
+    width: 600px !important;
+  } 
+  

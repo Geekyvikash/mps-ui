@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,10 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // FormControl
   ]
 })
 export class DashboardModule { }
