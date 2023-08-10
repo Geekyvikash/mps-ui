@@ -1,0 +1,361 @@
+
+<section class="top-nav">
+    <div class="logo">
+        <a routerLink="/">
+            <img src="assets/logo.svg" alt=""
+                style="width:100%; height: 50px; border-radius: 50%; box-sizing: border-box; vertical-align: middle;">
+        </a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+    <ul class="menu">
+      <li> <a href="">Home </a></li>
+
+      <li> <a href="">Find Jobs</a>
+        <ul class="submenu-content">
+            <li><a href="">Job Category 1</a></li>
+            <li><a href="">Job Category 2</a></li>
+        
+        </ul>
+    </li>
+      <li><a href="">Employer</a>
+        <ul class="submenu-content">
+            <li><a href="">Employer Services</a></li>
+            <li><a href="">Post a Job</a></li>
+        
+        </ul>
+    </li>
+      <li><a href="">Candidates</a></li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">Pages</a></li>
+      <li><button id="button1" (click)="openLg(longContent )">Login\Register</button></li>
+      <li><button id="button2">Add Jobs</button></li>
+    </ul>
+  </section>
+
+ 
+
+
+
+
+
+
+
+    <!-- Login -->
+    <!-- Login -->
+    <!-- Login -->
+    <!-- Login -->
+
+  
+    <ng-template #longContent let-modal>
+      <div class="modal-header" >
+        <h5 class="title">Login to superio account</h5>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        ></button>
+      </div>
+  <br>
+       <div class=" p-5 form-table">
+        <div id="cmb2-metabox-_candidate_register_fields" class="cmb2-metabox cmb-field-list">
+          <div class="cmb-row cmb-type-text cmb2-id--candidate-email table-layout" data-fieldtype="text">
+            <div class="cmb-th" >Email <span class="required">*</span></div>
+              <div class="cmb-td">
+                <input type="text" class="regular-text w-100" name="_candidate_email" id="_candidate_email" value="" data-hash="5d52tsq4k6r0" placeholder="Email" required="1">
+              </div>
+        </div>
+        <!-- <div class="cmb-row cmb-type-hide-show-password cmb2-id--candidate-password" data-fieldtype="hide_show_password">
+          <div class="cmb-th">Password <span class="required">*</span></div>
+            <div class="cmb-td">
+         
+              <span class="show_hide_password_wrapper">
+              <input type="password" class="regular-text w-100" name="_candidate_password" id="hide_show_password" value="" data-lpignore="1" autocomplete="off" data-hash="22je8icbor60" placeholder="Password" required="1">			
+              <a class="toggle-password" title="Show">
+                <span class="dashicons dashicons-hidden"></span>
+              </a>
+            </span>
+            
+          </div>
+        </div> -->
+        <br>
+  
+        <div class="row form-group info">
+          <div class="col-sm-6">
+            <label for="user-remember-field5207" class="remember">
+              <input type="checkbox" name="remember" id="user-remember-field5207" value="true"> &nbsp;Keep me signed in					
+            </label>
+          </div>
+          <!-- <div class="col-sm-6 link-right">
+            <a class="back-link" href="#" title="Forgotten password">
+              Forgotten password?</a>
+          </div> -->
+        </div>
+        <!-- <input type="checkbox"/>&nbsp;&nbsp;Keep me signed in
+        <div class="col-sm-6 link-right">
+          <a class="back-link" href="" title="Forgotten password">Forgotten password?</a>
+        </div> -->
+        <br>
+        <br>
+        <button class="w-100 btn register-btn btn-lg" (click)="openOt(lonContent )" (click)="modal.dismiss('Cross click')">Send OTP</button>
+  
+        <div class="login-info">
+          Don't you have an account?			
+        <a class="apus" (click)="openRs(content)" (click)="modal.dismiss('Cross click')">Register</a>   
+       </div>
+      </div>
+      
+    </div>
+    </ng-template>
+  
+  
+    <!-- SEND OTP -->
+  
+    <ng-template #lonContent let-modal>
+      <div class="modal-header" >
+        <h5 class="title">Please Eneter OTP</h5>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        ></button>
+      </div>
+  <br>
+       <div class=" p-5 form-table">
+        <div id="cmb2-metabox-_candidate_register_fields" class="cmb2-metabox cmb-field-list">
+          <div class="cmb-row cmb-type-text cmb2-id--candidate-email table-layout" data-fieldtype="text">
+            <div class="cmb-th" >Enter OTP <span class="required">*</span></div>
+              <div class="cmb-td">
+                <input type="text" class="regular-text w-100" name="_candidate_email" id="_candidate_email" value="" data-hash="5d52tsq4k6r0" placeholder="OTP" required="1">
+              </div>
+        </div>
+    
+        <br>
+  
+        <div class="row form-group info">
+          <div class="col-sm-6">
+            <label for="user-remember-field5207" class="remember">
+              <input type="checkbox" name="remember" id="user-remember-field5207" value="true"> &nbsp;Keep me signed in					
+            </label>
+          </div>
+    
+        </div>
+       
+        <br>
+        <br>
+        <button class="w-100 btn register-btn btn-lg">Login</button>
+      
+        <a class="apus" (click)="openLg(longContent )" (click)="modal.dismiss('Cross click')">Back To Login</a>
+  
+        <!-- <div class="login-info">
+          Don't you have an account?			
+        <a class="apus" (click)="openRs(content)" (click)="modal.dismiss('Cross click')">Register</a>   
+       </div> -->
+      </div>
+      
+    </div>
+    </ng-template>
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Register Employer -->
+  <!-- Register Employer -->
+  <!-- Register Employer -->
+  <!-- Register Employer -->
+  <!-- Register Employer -->
+
+  
+  <ng-template #content let-modal modal-lg class="modal-content" >
+      <div class="modal-header" >
+        <h4 class="title">Create a free superio account</h4>
+        <script src="http://192.168.1.20/backend/public/v1/api/"></script>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        ></button>
+      </div>
+  <br>
+      
+<form [formGroup]="registrationForm" >
+       <div class="topbutton">
+        <button type="button" class="btn btn-employer btn-lg" style="height: 50px;" >Employer</button>
+        <button type="button" class="btn  btn-contractor btn-lg" style="height: 50px;">Contractor</button>
+        </div>
+  
+  
+  
+        <div class=" p-5 form-table">
+          <div id="cmb2-metabox-_candidate_register_fields" class="cmb2-metabox cmb-field-list">
+            <div class="cmb-row cmb-type-text cmb2-id--candidate-first name table-layout" data-fieldtype="text">
+              <div class="cmb-th" >First Name <span class="required">*</span></div>
+                <div class="cmb-td">
+                  <input type="text" class="regular-text w-100" name="_candidate_first_name"  id="_candidate_first_name" formControlName="firstName"  data-hash="5d52tsq4k6r0" placeholder="First Name" required="1"
+                  [ngClass]="{ 'is-invalid': submitted && firstName.errors}"
+                  >    
+                  <div class=" text-danger" *ngIf="firstName.errors?.['required'] && (firstName.touched || firstName.dirty || submitted)">
+                    First Name is Required.
+                </div>
+                </div>
+               
+          </div>
+  
+        <div class="cmb-row cmb-type-text cmb2-id--candidate-last name table-layout" data-fieldtype="text">
+          <div class="cmb-th" >Last Name <span class="required">*</span></div>
+            <div class="cmb-td">
+              <input type="text" class="regular-text w-100" name="_candidate_last_name" id="_candidate_last_name" value="" formControlName="lastName" data-hash="5d52tsq4k6r0" placeholder="Last Name" required="1"
+              [ngClass]="{ 'is-invalid': submitted && lastName.errors}">
+              <div class=" text-danger" *ngIf="lastName.errors?.['required'] && (lastName.touched || lastName.dirty || submitted)">
+                Last Name is Required.
+            </div>
+            </div>
+      </div>
+  
+      <div class="cmb-row cmb-type-text cmb2-id--candidate-email table-layout" data-fieldtype="text">
+        <div class="cmb-th" >Email <span class="required">*</span></div>
+          <div class="cmb-td">
+            <input type="email" class="regular-text w-100" name="_candidate_email" id="_candidate_email" value="" formControlName="email" data-hash="5d52tsq4k6r0" placeholder="Email" required="1"
+            [ngClass]="{ 'is-invalid': submitted && email.errors}">
+            <div class=" text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty || submitted)">
+              Email is Required.
+          </div>
+          <div class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">
+            Email is Invalid.
+        </div>
+          </div>
+      </div>
+  
+      <div class="cmb-row cmb-type-text cmb2-id--candidate-mobile table-layout" data-fieldtype="text">
+        <div class="cmb-th" >Mobile <span class="required">*</span></div>
+          <div class="cmb-td">
+            <input type="number" class="regular-text w-100" formControlName="mobile" name="_candidate_mobile" id="_candidate_mobile" value="" data-hash="5d52tsq4k6r0" placeholder="Mobile" required="1"
+            [ngClass]="{ 'is-invalid': submitted && mobile.errors}">
+            <div class=" text-danger" *ngIf="mobile.errors?.['required'] && (mobile.touched || mobile.dirty || submitted)">
+              Mobile no. is Required.
+          </div>
+          </div>
+    </div>
+  
+    <div class="cmb-row cmb-type-text cmb2-id--candidate-address table-layout" data-fieldtype="text">
+      <div class="cmb-th" >Address <span class="required">*</span></div>
+        <div class="cmb-td">
+          <input type="text" class="regular-text w-100" name="_candidate_address" formControlName="address" id="_candidate_address" value="" data-hash="5d52tsq4k6r0" placeholder="Enter Address" required="1"
+          [ngClass]="{ 'is-invalid': submitted && address.errors}">
+          <div class=" text-danger" *ngIf="address.errors?.['required'] && (address.touched || address.dirty || submitted)">
+            Address is Required.
+        </div>
+        </div>
+    </div>
+
+    <!-- <div class="cmb-row cmb-type-text cmb2-id--candidate-state table-layout" data-fieldtype="text">
+      <div class="cmb-th" >State<span class="required">*</span></div>
+        <div class="cmb-td">
+          <input type="text" class="regular-text w-100" name="_candidate_state" formControlName="state" id="_candidate_state" value="" data-hash="5d52tsq4k6r0" placeholder="State" required="1"
+          [ngClass]="{ 'is-invalid': submitted && state.errors}">
+          <div class=" text-danger" *ngIf="state.errors?.['required'] && (state.touched || state.dirty || submitted)">
+            State is Required.
+        </div>
+        </div>
+    </div> -->
+
+ 
+    <div class="cmb-row cmb-type-text cmb2-id--candidate-city table-layout" data-fieldtype="text">
+      <div class="cmb-th" >City<span class="required">*</span></div>
+        <div class="cmb-td">
+          <input type="text" class="regular-text w-100" name="_candidate_city" formControlName="city" id="_candidate_city" value="" data-hash="5d52tsq4k6r0" placeholder="City" required="1"
+          [ngClass]="{ 'is-invalid': submitted && city.errors}">
+          <div class=" text-danger" *ngIf="city.errors?.['required'] && (city.touched || city.dirty || submitted)">
+            City is Required.
+        </div>
+        </div>
+    </div>
+  
+    <!-- <div class="cmb-row cmb-type-text cmb2-id--candidate-qualification table-layout" data-fieldtype="text">
+      <div class="cmb-th" >Qualification <span class="required">*</span></div>
+        <div class="cmb-td">
+          <input type="text" class="regular-text w-100" name="_candidate_qualification" formControlName="qualification" id="_candidate_qualification" value="" data-hash="5d52tsq4k6r0" placeholder="Enter Your Qualification" required="1"
+          [ngClass]="{ 'is-invalid': submitted && qualification.errors}">
+        </div>
+        <div class=" text-danger" *ngIf="qualification.errors?.['required'] && (qualification.touched || qualification.dirty || submitted)">
+          Qualification is Required.
+      </div>
+    </div> -->
+  
+    <!-- <div class="cmb-row cmb-type-text cmb2-id--candidate-degisnation table-layout" data-fieldtype="text">
+      <div class="cmb-th" >Designation <span class="required">*</span></div>
+        <div class="cmb-td">
+          <input type="text" class="regular-text w-100" name="_candidate_designation" formControlName="degisnation" id="_candidate_designation" value="" data-hash="5d52tsq4k6r0" placeholder="Enter Your Designation " required="1"
+          [ngClass]="{ 'is-invalid': submitted && degisnation.errors}">
+        </div>
+        <div class=" text-danger" *ngIf="degisnation.errors?.['required'] && (degisnation.touched || degisnation.dirty || submitted)">
+          Designation is Required.
+      </div>
+    </div> -->
+    <div class="cmb-row cmb-type-text cmb2-id--candidate-state table-layout" data-fieldtype="text">
+      <!-- <label class="form-label">State<span class="required">*</span></label>         -->
+      <div class="cmb-th" > State<span class="required">*</span></div>
+
+      <div class="regular-text">
+
+      <mat-select  class="regular-text" formControlName="state"
+      [class.is-invalid]="state?.invalid && state.touched" [class.is-valid]="state.valid">                                    
+        <mat-option
+          *ngFor="let codes of stateAll"
+          [value]="codes.code"
+        >
+          {{ codes.state_name }}
+        </mat-option>
+      </mat-select>
+      </div>
+      <!-- <div
+        *ngIf="code?.invalid && (code.dirty || code.touched)" class="alert alert-danger">
+        <div *ngIf="code.errors.required; else bbt">
+          Country Code is required.
+        </div>
+      </div>
+      <ng-template #bbt>
+        Please enter state name.
+      </ng-template> -->
+    </div>
+    
+ 
+        <br>
+        <input type="checkbox"/>&nbsp;&nbsp;You accept our Terms and Conditions and Privacy Policy
+        <br>
+        <br>
+        <button class="w-100 btn register-btn btn-lg" (click)="onSubmitEmployeData()">Register Now</button>
+  
+        <div class="login-info">
+        Already have an account?			
+        <a class="apus" (click)="openLg(longContent )" (click)="modal.dismiss('Cross click')">Login</a>   
+       </div>
+      </div>
+      
+    </div>
+
+    
+  </form>
+    </ng-template>
+  
+
+
+   
+          
+          
+  
+  
+  
+    
+  
+    
+    
