@@ -9,16 +9,25 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
+
 @NgModule({
   declarations: [
     DashboardComponent,
     FooterComponent,
-    HeaderComponent,
+    HeaderComponent
+
     
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgFor
   ]
 })
 export class DashboardModule { }

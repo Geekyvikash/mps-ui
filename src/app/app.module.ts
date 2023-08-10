@@ -4,13 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import {MatIconModule} from '@angular/material/icon';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { HeaderComponent } from './dashboard/header/header.component';
 // import { FooterComponent } from './dashboard/footer/footer.component';
 // import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent   
@@ -19,7 +20,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
