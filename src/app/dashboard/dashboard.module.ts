@@ -7,24 +7,18 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatFormFieldModule,
-    MatInputModule,
-    NgFor
-
-    // FormControl
+    FontAwesomeModule
   ]
 })
 export class DashboardModule { }
