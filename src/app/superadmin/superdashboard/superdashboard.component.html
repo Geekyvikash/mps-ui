@@ -1,0 +1,153 @@
+<app-superheader></app-superheader>
+<app-supersidenav></app-supersidenav>
+
+<div class="content mx-auto mt-2" style="margin-left: 22% !important;">
+    <h2>Applications statistics</h2>
+
+    <div class="grey-bg container-fluid">
+        <section id="minimal-statistics">
+            <div class="row">
+                <div class="col-12 mt-3 mb-1">
+                    <h4 class="text-uppercase"></h4>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="media d-flex">
+                                    <div class="icon-wrapper">
+                                        <div class="icon"
+                                            style="color: #1967D2;background: rgba(25, 103, 210, 0.1);font-size: 20px;line-height: 50px;width: 50px;height: 50px;text-align: center;">
+                                            <i class="fa fa-briefcase" style="font-size:24px"></i>
+                                        </div>
+                                    </div>
+                                    <div class="inner" style="margin-left: 30px;">
+                                        <div class="number-count">5</div>
+                                        <span>Applied Jobs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="media d-flex">
+                                    <div class="icon-wrapper">
+                                        <div class="icon"
+                                            style="color: #F9AB00;background: rgba(249, 171, 0, 0.1);font-size: 20px;line-height: 50px;width: 50px;height: 50px;text-align: center;">
+                                            <i class='far fa-comment-dots' style='font-size:24px'></i>
+                                        </div>
+                                    </div>
+                                    <div class="inner" style="margin-left: 30px;">
+                                        <div class="number-count" style="color: #F9AB00;">2</div>
+                                        <span>Review</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="media d-flex">
+                                    <div class="icon-wrapper">
+                                        <div class="icon"
+                                            style="color: #D93025;background: rgba(217, 48, 37, 0.1);font-size: 20px;line-height: 50px;width: 50px;height: 50px;text-align: center;">
+                                            <i class="fa fa-eye" style="font-size:24px"></i>
+                                        </div>
+                                    </div>
+                                    <div class="inner"  style="margin-left: 30px;">
+                                        <div class="number-count" style="color: #D93025;">172</div>
+                                        <span>Views</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="media d-flex">
+                                    <div class="icon-wrapper">
+                                        <div class="icon"
+                                            style="color: #34A853;background: rgba(52, 168, 83, 0.1);font-size: 20px;line-height: 50px;width: 50px;height: 50px;text-align: center;">
+                                            <i class="fa fa-bookmark-o" style="font-size:24px"></i>
+                                        </div>
+                                    </div>
+                                    <div class="inner"  style="margin-left: 30px;">
+                                        <div class="number-count" style="color: #34A853;">3</div>
+                                        <span>Shortlisted</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+
+
+    <!-- GRAPGH SECTION -->
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="inner-list">
+                <h3 class="title-small">Your Profile Views</h3>
+                <div class="page_views-wrapper"><iframe class="chartjs-hidden-iframe" tabindex="-1"
+                        style="display: block; overflow: hidden; border: 0px; margin: 0px; inset: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+
+                    <canvas id="dashboard_chart_wrapper"
+                        data-labels="[&quot;July 28, 2023&quot;,&quot;July 29, 2023&quot;,&quot;July 30, 2023&quot;,&quot;July 31, 2023&quot;,&quot;August 1, 2023&quot;,&quot;August 2, 2023&quot;,&quot;August 3, 2023&quot;,&quot;August 4, 2023&quot;,&quot;August 5, 2023&quot;,&quot;August 6, 2023&quot;,&quot;August 7, 2023&quot;,&quot;August 8, 2023&quot;,&quot;August 9, 2023&quot;,&quot;August 10, 2023&quot;,&quot;August 11, 2023&quot;]"
+                        data-values="[2,8,4,5,7,14,3,12,7,8,9,13,5,9,8]" data-label="Views" data-chart_type="line"
+                        data-bg_color="#1967D2" data-border_color="#1967D2"
+                        style="display: block; height: 195px; width: 391px;" width="782" height="390"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="inner-list dashboard-notifications">
+                <h3 class="title-small">Notifications</h3>
+                <div class="dashboard-notifications-wrapper ps-container ps-theme-default"
+                    data-ps-id="3c428983-27d5-71a2-11c5-175c300d9983">
+                    <ul>
+                        <li>
+                            <span class="icons">
+                                <i class="fa fa-envelope" style="font-size:24px;color: #34A853;
+                                background: rgba(52, 168, 83, 0.1);" ></i>
+                            </span><br><br>
+                            <span class="text">
+                                <div>You are invited to apply job <a
+                                        href="" style="color: black; font-weight: 600;">Junior
+                                        Graphic Designer (Web)</a>. </div>
+                                <small class="time">
+                                    13 hours ago </small>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                        <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                        <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GRAPGH SECTION -->
+
+</div>
+<app-superfooter></app-superfooter>

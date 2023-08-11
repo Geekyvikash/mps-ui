@@ -1,0 +1,35 @@
+<section>
+    <div class="form-box">
+        <form [formGroup]="loginForm" (ngSubmit)="onclick">
+      <div class="form-value">
+          <h2 class="Login" style="text-align: center;">Login to Mps</h2>
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" name="Enter email" placeholder="Enter email" required style="background-color: gainsboro;">
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" name="password" id="name" placeholder="Enter password" required style="background-color: gainsboro;">
+          </div>
+          <div class="forgot">
+            <label for="forgot">
+              <a href="#">forgot password</a>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" checked="checked" name="checked">
+              <span class="checkmark"></span> keep me signed in
+            </label>
+            <div class="button">
+              <button (click)="onclick()" >Login</button>
+              
+            </div>
+          </div>
+         
+      </div>
+    </form>
+    </div>
+  
+  </section>
+  
+  
+  
