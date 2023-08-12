@@ -9,6 +9,7 @@ URL= '';
 EMPLOYEE_REGISTER =environment.apiUrl + 'employee/register';
 CONTRACTOR_REGISTER= environment.apiUrl + 'contractor/register';
 GET_STATE= environment.apiUrl + 'countries-states/all';
-GET_CITYBY_ID = environment.apiUrl + 'states-cities/all?country_state='
+GET_CITYBY_ID = environment.apiUrl + 'states-cities/all?country_state=';
+SUPER_ADMIN = environment.apiUrl + 'auth ';
   constructor() { }
 }

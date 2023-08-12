@@ -12,9 +12,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { FooterComponent } from './dashboard/footer/footer.component';
 // import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './login/login/login.component';
 @NgModule({
   declarations: [
-    AppComponent   
+    AppComponent,
+    LoginComponent   
   ],
   imports: [
     BrowserModule,
