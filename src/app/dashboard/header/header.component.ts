@@ -144,29 +144,6 @@ openContractorLogin() {
   // COMPANY LOGIN
   // COMPANY LOGIN
 
-  companyRegistrationForm = new FormGroup({
-    comapanyFirstName : new FormControl ('', Validators.required),
-    businessName : new FormControl ('', Validators.required),
-    businessType : new FormControl ('', Validators.required),
-    panNumnber : new FormControl ('', Validators.required),
-    registrationNumber : new FormControl ('', Validators.required),
-    companyAddress : new FormControl ('', Validators.required),
-    mailingAddress : new FormControl ('', Validators.required),
-    businessEmail : new FormControl ('', Validators.required),
-    phoneNo : new FormControl ('', Validators.required),
-    cityId : new FormControl ('', Validators.required),
-    compContName: new FormControl ('', Validators.required),
-    comapanyId: new FormControl ('', Validators.required),
-    contactType: new FormControl ('', Validators.required),
-    phNumber: new FormControl ('', Validators.required),
-    companyEmail: new FormControl ('', Validators.required),
-    companyAddresss: new FormControl ('', Validators.required),
-
-
-  })
- 
- 
-
   get comapanyFirstName(){
     return this.companyRegistrationForm.get('comapanyFirstName') as FormControl;
   }
@@ -206,32 +183,52 @@ openContractorLogin() {
     return this.companyRegistrationForm.get('cityId') as FormControl;
   }
   get compContName(){
-    return this.companyRegistrationForm.get('compContName') as FormControl;
+    return this.companyRegistrationForm2.get('compContName') as FormControl;
   }
   get comapanyId(){
-    return this.companyRegistrationForm.get('comapanyId') as FormControl;
+    return this.companyRegistrationForm2.get('comapanyId') as FormControl;
   }
   get contactType(){
-    return this.companyRegistrationForm.get('contactType') as FormControl;
+    return this.companyRegistrationForm2.get('contactType') as FormControl;
   }
   get phNumber(){
-    return this.companyRegistrationForm.get('phNumber') as FormControl;
+    return this.companyRegistrationForm2.get('phNumber') as FormControl;
   }
   get companyEmail(){
-    return this.companyRegistrationForm.get('companyEmail') as FormControl;
+    return this.companyRegistrationForm2.get('companyEmail') as FormControl;
   }
   get companyAddresss(){
-    return this.companyRegistrationForm.get('companyAddresss') as FormControl;
+    return this.companyRegistrationForm2.get('companyAddresss') as FormControl;
   }
-  
-  
-  
 
-//   get f()
-// {
-//     return this.registrationForm.controls;
-// }
 
+
+
+  companyRegistrationForm= this.fb.group({
+    comapanyFirstName:['',Validators.required],
+    businessName:['',Validators.required],
+    businessType:['',Validators.required],
+    panNumnber:['',Validators.required],
+    registrationNumber:['',Validators.required],
+    companyAddress:['',Validators.required],
+    mailingAddress:['',Validators.required],
+    businessEmail:['',Validators.required],
+    phoneNo:['',Validators.required],
+    cityId:['',Validators.required],    
+  })
+
+  companyRegistrationForm2= this.fb.group({   
+    compContName:['',Validators.required],
+    comapanyId:['',Validators.required],
+    contactType:['',Validators.required],
+    phNumber:['',Validators.required],
+    companyEmail:['',Validators.required],
+    companyAddresss:['',Validators.required],
+ 
+  })
+
+  
+  Next(){}
   
   onSubmitEmployeData(){
     console.log("click");
@@ -275,7 +272,7 @@ private getCity(){
   onSubmit() {
   }
 
-
+//otp
   config = {
     allowNumbersOnly: false,
     length: 6,
@@ -311,5 +308,8 @@ onSubmitCompanyData(){
     return;
   }
 
+
+
 }
+
 }

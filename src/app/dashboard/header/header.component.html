@@ -62,24 +62,6 @@
       </button>
     </div>
   </div>
-<!-- 
-  <div class="topbutton">
-    <button
-      type="button"
-      class="btn btn-employer btn-lg"
-      style="height: 50px"
-    >
-      Employer
-    </button>
-    <button
-      type="button"
-      class="btn btn-contractor btn-lg"
-      style="height: 50px"
-    >
-      Contractor
-    </button>
-  </div> -->
-
   <br />
 
   <div class="p-5 form-table">
@@ -107,7 +89,7 @@
       </div>
       <br />
       <br />
-      <button class="w-100 btn register-btn btn-lg" (click)="openEmployeeOTP(employeeOTPContent)">
+      <button class="w-100 btn register-btn btn-lg" (click)="modal.dismiss('Cross click')" (click)="openEmployeeOTP(employeeOTPContent)">
         Send OTP
       </button>
 
@@ -144,7 +126,7 @@
       </div>
       <br />
       <br />
-      <button class="w-100 btn register-btn btn-lg" (click)="openContractorOTP(contractorOTPContent)">
+      <button class="w-100 btn register-btn btn-lg" (click)="modal.dismiss('Cross click')" (click)="openContractorOTP(contractorOTPContent)">
         Send OTP
       </button>
 
@@ -169,19 +151,7 @@
   </div>
   <br />
   <div class="p-5 form-table">
-    <div id="cmb2-metabox-_candidate_register_fields" class="cmb2-metabox cmb-field-list">
-      <!-- <div class="otp-container">
-        <label for="otp" class="otp-label">Enter OTP:</label>
-        <div id="otp" class="otp-inputs">
-          <input class="otp-input" type="number" id="first" min="0" max="9" />
-          <input class="otp-input" type="number" id="second" min="0" max="9" />
-          <input class="otp-input" type="number" id="third" min="0" max="9" />
-          <input class="otp-input" type="number" id="fourth" min="0" max="9" />
-          <input class="otp-input" type="number" id="fifth" min="0" max="9" />
-          <input class="otp-input" type="number" id="sixth" min="0" max="9" />
-        </div>
-      </div> -->
-
+    <div id="cmb2-metabox-_candidate_register_fields" class="cmb2-metabox cmb-field-list">      
       <div class="otp-container">
         <p class="a-o-i">Enter verification code</p>
         <div class="o-c">
@@ -193,7 +163,6 @@
                 *ngIf="showOtpComponent"
                 [config]="config"
               ></ng-otp-input>
-              <!-- <span *ngIf="otp" class="o-t-p">Entered otp :-{{ otp }}</span> -->
             </div>
           </div>
         </div>
@@ -564,44 +533,6 @@
 </ng-template>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- COMPANY LOGIN -->
-<!-- COMPANY LOGIN -->
-<!-- COMPANY LOGIN -->
-<!-- COMPANY LOGIN -->
-<!-- COMPANY LOGIN -->
-<!-- COMPANY LOGIN -->
-<!-- COMPANY LOGIN -->
 <!-- COMPANY LOGIN -->
 
 
@@ -641,20 +572,7 @@
             required="1"
           />
         </div>
-      </div>
-      <!-- <div class="cmb-row cmb-type-hide-show-password cmb2-id--candidate-password" data-fieldtype="hide_show_password">
-          <div class="cmb-th">Password <span class="required">*</span></div>
-            <div class="cmb-td">
-         
-              <span class="show_hide_password_wrapper">
-              <input type="password" class="regular-text w-100" name="_candidate_password" id="hide_show_password" value="" data-lpignore="1" autocomplete="off" data-hash="22je8icbor60" placeholder="Password" required="1">			
-              <a class="toggle-password" title="Show">
-                <span class="dashicons dashicons-hidden"></span>
-              </a>
-            </span>
-            
-          </div>
-        </div> -->
+      </div>      
       <br />
 
       <div class="row form-group info">
@@ -668,16 +586,9 @@
             />
             &nbsp;Keep me signed in
           </label>
-        </div>
-        <!-- <div class="col-sm-6 link-right">
-            <a class="back-link" href="#" title="Forgotten password">
-              Forgotten password?</a>
-          </div> -->
+        </div>        
       </div>
-      <!-- <input type="checkbox"/>&nbsp;&nbsp;Keep me signed in
-        <div class="col-sm-6 link-right">
-          <a class="back-link" href="" title="Forgotten password">Forgotten password?</a>
-        </div> -->
+      
       <br />
       <br />
       <button
@@ -715,28 +626,24 @@
   </div>
   <br />
   <div class="p-5 form-table">
-    <div
-      id="cmb2-metabox-_candidate_register_fields"
-      class="cmb2-metabox cmb-field-list"
-    >
-      <div
-        class="cmb-row cmb-type-text cmb2-id--candidate-email table-layout"
-        data-fieldtype="text"
-      >
-        <div class="cmb-th">Enter OTP <span class="required">*</span></div>
-        <div class="cmb-td">
-          <input
-            type="text"
-            class="regular-text w-100"
-            name="_candidate_email"
-            id="_candidate_email"
-            value=""
-            data-hash="5d52tsq4k6r0"
-            placeholder="OTP"
-            required="1"
-          />
+    <div id="cmb2-metabox-_candidate_register_fields" class="cmb2-metabox cmb-field-list">
+      <div class="otp-container">
+        <p class="a-o-i">Enter verification code</p>
+        <div class="o-c">
+          <div>
+            <div class="otp-inputs">
+              <ng-otp-input
+                #ngOtpInput
+                (onInputChange)="onOtpChange($event)"
+                *ngIf="showOtpComponent"
+                [config]="config"
+              ></ng-otp-input>
+              <!-- <span *ngIf="otp" class="o-t-p">Entered otp :-{{ otp }}</span> -->
+            </div>
+          </div>
         </div>
       </div>
+
 
       <br />
 
@@ -759,17 +666,14 @@
       <button class="w-100 btn register-btn btn-lg">Login</button>
 
       <a
-        class="apus"
-        (click)="openLg(longCompany)"
-        (click)="modal.dismiss('Cross click')"
-        >Back To Login</a
-      >
+      class="apus"
+      (click)="openLg(longCompany)"
+      (click)="modal.dismiss('Cross click')"
+      >Back To Login</a>      
 
-      <!-- <div class="login-info">
-          Don't you have an account?			
-        <a class="apus" (click)="openRs(content)" (click)="modal.dismiss('Cross click')">Register</a>   
-       </div> -->
     </div>
+
+
   </div>
 </ng-template>
 
@@ -790,7 +694,7 @@
   <br />
 
 
-<mat-stepper #stepper>
+<mat-stepper #stepper linear>
   <mat-step [stepControl]="companyRegistrationForm" errorMessage="Name is required.">
     <form [formGroup]="companyRegistrationForm">
       <ng-template matStepLabel>Fill Out Step One</ng-template>
@@ -841,13 +745,13 @@
     <div class="col-6">
       <mat-form-field class="regular-step">
         <mat-label>Business Email</mat-label>
-        <input matInput placeholder="Business Email" formControlName="businessEmail" required>
+        <input matInput type="email" placeholder="Business Email" formControlName="businessEmail" required>
       </mat-form-field>
     </div>
     <div class="col-6">
       <mat-form-field class="regular-step">
         <mat-label>Phone No.</mat-label>
-        <input matInput placeholder="Phone No." formControlName="phoneNo" required>
+        <input matInput type="number" placeholder="Phone No." formControlName="phoneNo" required>
       </mat-form-field>
     </div>
     <div class="col-6">
@@ -861,11 +765,11 @@
   </div>
         <p>Go to a different step to see the error state</p>
         <button mat-button matStepperNext class="stepbtn"
-        (click)="onSubmitCompanyData()">Next</button>
+         (click)="Next()" matStepperNext>Next</button>
     </form>
   </mat-step>
-  <mat-step [stepControl]="companyRegistrationForm" errorMessage="Address is required.">
-    <form [formGroup]="companyRegistrationForm">
+  <mat-step [stepControl]="companyRegistrationForm2" errorMessage="Address is required.">
+    <form [formGroup]="companyRegistrationForm2">
       <ng-template matStepLabel>Fill Out Step Second</ng-template>
    <div class="row">
     <div class="col-6">
@@ -889,7 +793,7 @@
     <div class="col-6">
       <mat-form-field class="regular-step">
         <mat-label>Phone No.</mat-label>
-        <input matInput placeholder="Phone No." formControlName="phNumber" required>
+        <input matInput type="number" placeholder="Phone No." formControlName="phNumber" required>
       </mat-form-field>
     </div>
     <div class="col-6">
@@ -930,7 +834,6 @@
     
   </mat-step>
 </mat-stepper>
-
 </ng-template>
 
 
