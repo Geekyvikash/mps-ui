@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { BaseService } from 'src/app/shared/services/base.service';
@@ -12,8 +12,19 @@ import { HttpService } from 'src/app/shared/services/http.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
+  @ViewChild('ngOtpInput', { static: false}) ngOtpInput: any;
+  otp: any;
+  showOtpComponent = true;
+
+
+  contractorOTPInputs: string[] = [];
   mobileMenuOpen: boolean = false;
+
+  contractorLoginContent: any;
+  employeeOTPContent: any;
+  contractorOTPContent: any;
   isLinear = true;
+
 
 
   toggleMobileMenu() {
@@ -23,13 +34,7 @@ export class HeaderComponent implements OnInit{
   submitted = false;
   stateAll:any=[];
   citiesAll: any=[];
-
-
-  // get f(): { [key: string]: AbstractControl } {
-  //   return this.form.controls;
-  // }
-
-
+  isEmployerFormVisible = true; // Initialize with Employer form visible
 
   constructor(private modalService: NgbModal, private http: HttpService, private fb: FormBuilder, private url: BaseService){
    
@@ -62,10 +67,39 @@ export class HeaderComponent implements OnInit{
 
  
 
+
+
+openContractorLogin() {
+    // Open the modal with the contractor login form
+    this.modalService.open(this.contractorLoginContent, { size: 'sm' });
+  }
+
+
   ngOnInit(): void {
     this.getState();
     // this.getCity();
   }
+
+
+
+  toggleForm(isEmployer: boolean) {
+    this.isEmployerFormVisible = isEmployer;
+  }
+  openEmployeeOTP(employeeOTPContent:any) {
+    this.modalService.open(employeeOTPContent, { size: ' ', centered:true });
+  }
+
+  openContractorOTP(contractorOTPContent:any) {
+    this.contractorOTPInputs = Array.from({ length: 6 }, () => '');
+    this.modalService.open(contractorOTPContent, { size: ' ', centered:true });
+  }
+  
+
+
+
+
+  
+
   registrationForm = new FormGroup({
     firstName : new FormControl ('', Validators.required),
     lastName : new FormControl ('', Validators.required),
@@ -238,6 +272,33 @@ private getCity(){
   })
   }
   
+  onSubmit() {
+  }
+
+
+  config = {
+    allowNumbersOnly: false,
+    length: 6,
+    isPasswordInput: false,
+    disableAutoFocus: false,
+    placeholder: '',
+    inputStyles: {
+      'width': '50px',
+      'height': '50px'
+    }
+  };
+  onOtpChange(otp:any) {
+    this.otp = otp;
+  }
+  onConfigChange() {
+    this.showOtpComponent = false;
+    this.otp = null;
+    setTimeout(() => {
+      this.showOtpComponent = true;
+    }, 0);
+  }
+  
+
 onhandleCompanyReg(){
   console.log("click")
 }
@@ -251,6 +312,4 @@ onSubmitCompanyData(){
   }
 
 }
-
-
 }

@@ -8,6 +8,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgOtpInputModule } from 'ng-otp-input';
+
 
 import {MatStepperModule} from '@angular/material/stepper';
 
@@ -28,7 +30,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     ReactiveFormsModule,
     FormsModule,
     NgFor,
-    MatStepperModule
+    NgOtpInputModule,    
+    MatStepperModule,
   ]
 })
 export class DashboardModule { }

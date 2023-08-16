@@ -350,6 +350,81 @@ ul li ul {
     width: 600px !important;
   } 
   
+
+
+/* ACTIVE BUTTN  */
+
+.topbutton {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .btn-role {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px; /* Add margin between buttons */
+  }
+  
+  .btn-role.active {
+    background-color: #34A853;
+    color: white;
+  }
+  
+
+
+
+/* OTP VERIFICATION */
+  .otp-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .otp-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .otp-inputs {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .stepbtn{
     background-color: #1451a4;
     /* margin-left: 30%; */
@@ -387,3 +462,4 @@ ul li ul {
     color: #f0f5f7;
     font-size: large;
 }
+
