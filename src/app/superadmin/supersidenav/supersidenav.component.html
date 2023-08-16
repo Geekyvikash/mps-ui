@@ -23,16 +23,26 @@
 
 
     <nav>
-        <ul>
+        <!-- <ul>
             <li class="active menu-item"
                 style="background-color: rgb(25 103 210 / 10%);color: #1967D2;padding: 17px 20px;border-radius: 10px;">
                 <a href="#"
                     style="background: transparent;text-decoration: none;cursor: pointer;color: #1967D2;font-size: 15px;"><i
-                        class='far fa-address-card' style='font-size:18px'></i>&nbsp;User Dashboard</a></li>
-            <li class="menu-item"><a href="#"
-                    style="background: transparent;text-decoration: none;cursor: pointer;color:#696969;font-size: 15px;"><i
+                        class='far fa-address-card' style='font-size:18px'></i>&nbsp;User Dashboard</a>
+            </li>
+
+            <li class="menu-item has-submenu" (mouseenter)="showSubmenu = true" (mouseleave)="showSubmenu = false">
+                <a style="background: transparent;text-decoration: none;cursor: pointer;color:#696969;font-size: 15px;"><i
                         class="flaticon-businessman" class='fas fa-user-tie' style='font-size:18px'></i>
-                    &nbsp;Profile</a></li>
+                    &nbsp;Profile
+                    <span class="fa fa-caret-down"></span>
+                </a>
+                <ul class="submenu" *ngIf="showSubmenu">
+                    <li><a>User</a></li>
+                    <li><a >Candidate</a></li>
+                 </ul>
+            </li>
+
             <li class="menu-item"><a href="#"
                     style="background: transparent;text-decoration: none;cursor: pointer;color:#696969;font-size: 15px;"><i
                         class="flaticon-resume" class="fa fa-file-text-o" style="font-size:18px"></i>&nbsp;My Resume</a>
@@ -72,19 +82,34 @@
                     style="background: transparent;text-decoration: none;cursor: pointer;color:#696969;font-size: 15px;"><i
                         class="ti-power-off" class="fa fa-power-off" style="font-size:18px"></i>&nbsp;Logout</a></li>
 
-        </ul>
+        </ul> -->
+        <div class="sidebar" [class.sidebar-close]="!openSidebar">
+            <!-- <div class="logo-details">
+              <div class="logo"></div>
+            </div> -->
+            <ul class="nav-links" id="nav-links">
+              <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active"  style="border-radius: 10px;">
+                <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+                  <a >
+                    <i [class]="item.icon" style="color: black;"></i>
+                    <span class="link_name">{{item.link_name}}</span>
+                  </a>
+                </div>
+                <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
+                  <a>
+                    <i [class]="item.icon" style="color: black;"></i>
+                    <span class="link_name">{{item.link_name}}</span>
+                  </a>
+                  <i class="fa fa-caret-down arrow"></i>
+                </div>
+                <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
+                  <li><a class="link_name">{{item.link_name}}</a></li>
+                  <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+                    <a >{{item_sub.link_name}}</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
     </nav>
 </aside>
-
-<!-- <section class="main">
-    <h2>Contant</h2>
-    
-  </section> -->
-<script>
-    $(function () {
-        $('.toggle-menu').click(function (e) {
-            e.preventDefault();
-            $('.sidebar').toggleClass('toggled');
-        });
-    });
-</script>
