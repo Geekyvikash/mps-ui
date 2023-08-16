@@ -19,9 +19,13 @@ export class HeaderComponent implements OnInit{
 
   contractorOTPInputs: string[] = [];
   mobileMenuOpen: boolean = false;
+
   contractorLoginContent: any;
   employeeOTPContent: any;
   contractorOTPContent: any;
+  isLinear = true;
+
+
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
@@ -42,14 +46,26 @@ export class HeaderComponent implements OnInit{
   // openRc(content: any) {
   //   this.modalService.open(content, { size: 'lg',centered: true } );
   // }
-
-  openLg(content: any) {
-    this.modalService.open(content, { size: '',centered: true } );
+//  REGISTER LOGIN
+  openLg(longCompany: any) {
+    this.modalService.open(longCompany, { size: '',centered: true } );
+  }
+  openOt(lonContent: any) {
+    this.modalService.open(lonContent, { size: '',centered: true } );
   }
 
-  openOt(content: any) {
-    this.modalService.open(content, { size: '',centered: true } );
+  // COMPANY LOGIN
+  openCm(longCompany: any) {
+    this.modalService.open(longCompany, { size: '',centered: true } );
   }
+  openRscom(loginCompany: any) {
+    this.modalService.open(loginCompany, { size: 'lg',centered: true } );
+  }
+  openOtp(lonCompany: any) {
+    this.modalService.open(lonCompany, { size: '',centered: true } );
+  }
+
+ 
 
 
 
@@ -61,7 +77,7 @@ openContractorLogin() {
 
   ngOnInit(): void {
     this.getState();
-    this.getCity();
+    // this.getCity();
   }
 
 
@@ -94,11 +110,8 @@ openContractorLogin() {
     state : new FormControl ('', Validators.required),
     qualification : new FormControl ('', Validators.required),
     degisnation : new FormControl ('', Validators.required),
-
-
-
   })
- 
+
   get firstName(){
     return this.registrationForm.get('firstName') as FormControl;
   }
@@ -127,6 +140,90 @@ openContractorLogin() {
   get degisnation(){
     return this.registrationForm.get('degisnation') as FormControl;
   }
+
+  // COMPANY LOGIN
+  // COMPANY LOGIN
+
+  companyRegistrationForm = new FormGroup({
+    comapanyFirstName : new FormControl ('', Validators.required),
+    businessName : new FormControl ('', Validators.required),
+    businessType : new FormControl ('', Validators.required),
+    panNumnber : new FormControl ('', Validators.required),
+    registrationNumber : new FormControl ('', Validators.required),
+    companyAddress : new FormControl ('', Validators.required),
+    mailingAddress : new FormControl ('', Validators.required),
+    businessEmail : new FormControl ('', Validators.required),
+    phoneNo : new FormControl ('', Validators.required),
+    cityId : new FormControl ('', Validators.required),
+    compContName: new FormControl ('', Validators.required),
+    comapanyId: new FormControl ('', Validators.required),
+    contactType: new FormControl ('', Validators.required),
+    phNumber: new FormControl ('', Validators.required),
+    companyEmail: new FormControl ('', Validators.required),
+    companyAddresss: new FormControl ('', Validators.required),
+
+
+  })
+ 
+ 
+
+  get comapanyFirstName(){
+    return this.companyRegistrationForm.get('comapanyFirstName') as FormControl;
+  }
+  get businessName(){
+    return this.companyRegistrationForm.get('businessName') as FormControl;
+  }
+  
+  get businessType(){
+    return this.companyRegistrationForm.get('businessType') as FormControl;
+  }
+
+  get panNumnber(){
+    return this.companyRegistrationForm.get('panNumnber') as FormControl;
+  }
+  
+  get registrationNumber(){
+    return this.companyRegistrationForm.get('registrationNumber') as FormControl;
+  }
+  
+  get companyAddress(){
+    return this.companyRegistrationForm.get('companyAddress') as FormControl;
+  }
+  
+  get mailingAddress(){
+    return this.companyRegistrationForm.get('mailingAddress') as FormControl;
+  }
+
+  get businessEmail(){
+    return this.companyRegistrationForm.get('businessEmail') as FormControl;
+  }
+  
+  get phoneNo(){
+    return this.companyRegistrationForm.get('phoneNo') as FormControl;
+  }
+  
+  get cityId(){
+    return this.companyRegistrationForm.get('cityId') as FormControl;
+  }
+  get compContName(){
+    return this.companyRegistrationForm.get('compContName') as FormControl;
+  }
+  get comapanyId(){
+    return this.companyRegistrationForm.get('comapanyId') as FormControl;
+  }
+  get contactType(){
+    return this.companyRegistrationForm.get('contactType') as FormControl;
+  }
+  get phNumber(){
+    return this.companyRegistrationForm.get('phNumber') as FormControl;
+  }
+  get companyEmail(){
+    return this.companyRegistrationForm.get('companyEmail') as FormControl;
+  }
+  get companyAddresss(){
+    return this.companyRegistrationForm.get('companyAddresss') as FormControl;
+  }
+  
   
   
 
@@ -138,7 +235,6 @@ openContractorLogin() {
   
   onSubmitEmployeData(){
     console.log("click");
-    
     this.submitted=true;
     if(this.registrationForm.invalid){
       return;
@@ -202,4 +298,18 @@ private getCity(){
     }, 0);
   }
   
+
+onhandleCompanyReg(){
+  console.log("click")
+}
+
+
+Msg: any;
+onSubmitCompanyData(){
+  this.submitted=true;
+  if(this.companyRegistrationForm.invalid){
+    return;
+  }
+
+}
 }

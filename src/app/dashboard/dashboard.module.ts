@@ -11,7 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgOtpInputModule } from 'ng-otp-input';
 
 
-
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -30,8 +30,8 @@ import { NgOtpInputModule } from 'ng-otp-input';
     ReactiveFormsModule,
     FormsModule,
     NgFor,
-    NgOtpInputModule
-    
+    NgOtpInputModule,    
+    MatStepperModule,
   ]
 })
 export class DashboardModule { }
