@@ -41,7 +41,7 @@
     <li>
       <button id="button1" (click)="openLg(longContent)">Login\Register</button>
     </li>
-    <li><button id="button2">Add Jobs</button></li>
+    <li><button id="button2" (click)="openCm(longCompany)">Add Jobs</button></li>
   </ul>
 </section>
 
@@ -59,6 +59,22 @@
       aria-label="Close"
       (click)="modal.dismiss('Cross click')"
     ></button>
+  </div>
+  <div class="topbutton">
+    <button
+      type="button"
+      class="btn btn-employer btn-lg"
+      style="height: 50px"
+    >
+      Employer
+    </button>
+    <button
+      type="button"
+      class="btn btn-contractor btn-lg"
+      style="height: 50px"
+    >
+      Contractor
+    </button>
   </div>
   <br />
   <div class="p-5 form-table">
@@ -484,3 +500,387 @@
     </div>
   </form>
 </ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+<!-- COMPANY LOGIN -->
+
+
+
+
+<ng-template #longCompany let-modal>
+  
+  <div class="modal-header">
+    <h5 class="title">Login to superio account</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <br />
+  <div class="p-5 form-table">
+    <div
+      id="cmb2-metabox-_candidate_register_fields"
+      class="cmb2-metabox cmb-field-list"
+    >
+      <div
+        class="cmb-row cmb-type-text cmb2-id--candidate-email table-layout"
+        data-fieldtype="text"
+      >
+        <div class="cmb-th">Email <span class="required">*</span></div>
+        <div class="cmb-td">
+          <input
+            type="text"
+            class="regular-text w-100"
+            name="_candidate_email"
+            id="_candidate_email"
+            value=""
+            data-hash="5d52tsq4k6r0"
+            placeholder="Email"
+            required="1"
+          />
+        </div>
+      </div>
+      <!-- <div class="cmb-row cmb-type-hide-show-password cmb2-id--candidate-password" data-fieldtype="hide_show_password">
+          <div class="cmb-th">Password <span class="required">*</span></div>
+            <div class="cmb-td">
+         
+              <span class="show_hide_password_wrapper">
+              <input type="password" class="regular-text w-100" name="_candidate_password" id="hide_show_password" value="" data-lpignore="1" autocomplete="off" data-hash="22je8icbor60" placeholder="Password" required="1">			
+              <a class="toggle-password" title="Show">
+                <span class="dashicons dashicons-hidden"></span>
+              </a>
+            </span>
+            
+          </div>
+        </div> -->
+      <br />
+
+      <div class="row form-group info">
+        <div class="col-sm-6">
+          <label for="user-remember-field5207" class="remember">
+            <input
+              type="checkbox"
+              name="remember"
+              id="user-remember-field5207"
+              value="true"
+            />
+            &nbsp;Keep me signed in
+          </label>
+        </div>
+        <!-- <div class="col-sm-6 link-right">
+            <a class="back-link" href="#" title="Forgotten password">
+              Forgotten password?</a>
+          </div> -->
+      </div>
+      <!-- <input type="checkbox"/>&nbsp;&nbsp;Keep me signed in
+        <div class="col-sm-6 link-right">
+          <a class="back-link" href="" title="Forgotten password">Forgotten password?</a>
+        </div> -->
+      <br />
+      <br />
+      <button
+        class="w-100 btn register-btn btn-lg"
+        (click)="openOtp(lonCompany)"
+        (click)="modal.dismiss('Cross click')"
+      >
+        Send OTP
+      </button>
+
+      <div class="login-info">
+        Don't you have an account?
+        <a
+          class="apus"
+          (click)="openRscom(loginCompany)"
+          (click)="modal.dismiss('Cross click')"
+          >Register</a
+        >
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- SEND OTP -->
+
+<ng-template #lonCompany let-modal>
+  <div class="modal-header">
+    <h5 class="title">Please Eneter OTP</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <br />
+  <div class="p-5 form-table">
+    <div
+      id="cmb2-metabox-_candidate_register_fields"
+      class="cmb2-metabox cmb-field-list"
+    >
+      <div
+        class="cmb-row cmb-type-text cmb2-id--candidate-email table-layout"
+        data-fieldtype="text"
+      >
+        <div class="cmb-th">Enter OTP <span class="required">*</span></div>
+        <div class="cmb-td">
+          <input
+            type="text"
+            class="regular-text w-100"
+            name="_candidate_email"
+            id="_candidate_email"
+            value=""
+            data-hash="5d52tsq4k6r0"
+            placeholder="OTP"
+            required="1"
+          />
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row form-group info">
+        <div class="col-sm-6">
+          <label for="user-remember-field5207" class="remember">
+            <input
+              type="checkbox"
+              name="remember"
+              id="user-remember-field5207"
+              value="true"
+            />
+            &nbsp;Keep me signed in
+          </label>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <button class="w-100 btn register-btn btn-lg">Login</button>
+
+      <a
+        class="apus"
+        (click)="openLg(longCompany)"
+        (click)="modal.dismiss('Cross click')"
+        >Back To Login</a
+      >
+
+      <!-- <div class="login-info">
+          Don't you have an account?			
+        <a class="apus" (click)="openRs(content)" (click)="modal.dismiss('Cross click')">Register</a>   
+       </div> -->
+    </div>
+  </div>
+</ng-template>
+
+
+<!-- Register Company -->
+<!-- Register Company -->
+
+<ng-template #loginCompany let-modal modal-lg class="modal-content">
+  <div class="modal-header">
+    <h4 class="title">Create a free superio account</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <br />
+
+
+<mat-stepper #stepper>
+  <mat-step [stepControl]="companyRegistrationForm" errorMessage="Name is required.">
+    <form [formGroup]="companyRegistrationForm">
+      <ng-template matStepLabel>Fill Out Step One</ng-template>
+     <div class="row">
+      <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="name"  formControlName="comapanyFirstName" required/>
+        
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Bussiness Name</mat-label>
+        <input matInput placeholder="Bussiness Name" formControlName="businessName" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Bussiness Type</mat-label>
+        <input matInput placeholder="Bussiness Tyspe" formControlName="businessType" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Pan Number</mat-label>
+        <input matInput placeholder="Pan Number" formControlName="panNumnber" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Registration Number</mat-label>
+        <input matInput placeholder="Registration Number" formControlName="registrationNumber" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Address" formControlName="companyAddress" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Mailing Address</mat-label>
+        <input matInput placeholder="Mailing Address" formControlName="mailingAddress" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Business Email</mat-label>
+        <input matInput placeholder="Business Email" formControlName="businessEmail" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Phone No.</mat-label>
+        <input matInput placeholder="Phone No." formControlName="phoneNo" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>City Id</mat-label>
+        <input matInput placeholder="City Id" formControlName="cityId" required>
+      </mat-form-field>
+    </div>
+      <div>
+    </div>
+  </div>
+        <p>Go to a different step to see the error state</p>
+        <button mat-button matStepperNext class="stepbtn"
+        (click)="onSubmitCompanyData()">Next</button>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="companyRegistrationForm" errorMessage="Address is required.">
+    <form [formGroup]="companyRegistrationForm">
+      <ng-template matStepLabel>Fill Out Step Second</ng-template>
+   <div class="row">
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="name"  formControlName="compContName" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Company Id</mat-label>
+        <input matInput placeholder="Company Id"  formControlName="comapanyId" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Contact Type</mat-label>
+        <input matInput placeholder="Contact Type" formControlName="contactType" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Phone No.</mat-label>
+        <input matInput placeholder="Phone No." formControlName="phNumber" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="companyEmail" required>
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field class="regular-step">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Address" formControlName="companyAddresss" required>
+      </mat-form-field>
+    </div>
+  </div>
+
+      <div>
+        <p>Go to a different step to see the error state</p>
+        <button mat-button matStepperPrevious class="stepbtn">Back</button>
+        <button mat-button matStepperNext class="stepbtn" style="margin-left: 10%;">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <h3>You are now done.</h3>
+    <div class="row">
+      <div class="col-4">
+        <button class="btn-company " mat-button matStepperPrevious >Back</button>
+      </div>
+      <div class="col-4">
+        <button class="btn-company " mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+      <div class="col-4">
+        <button class="btn-company "  mat-button (click)="onhandleCompanyReg()">Submit</button>
+      </div>
+    </div>
+    
+  </mat-step>
+</mat-stepper>
+
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

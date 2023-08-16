@@ -301,6 +301,14 @@ ul li ul {
     color: #f0f5f7;
 }
 
+.btn-company{
+    background-color: #34A853;
+    margin-left: 30%;
+    width: 35%;
+    border: none;
+    color: #f0f5f7;
+}
+
 .regular-text{
     height:56px;
     width: 95%;
@@ -342,3 +350,40 @@ ul li ul {
     width: 600px !important;
   } 
   
+  .stepbtn{
+    background-color: #1451a4;
+    /* margin-left: 30%; */
+    width: 35%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #f0f5f7;
+    font-size: large;
+}
+
+
+.regular-step{
+    /* height:56px; */
+    width: 95%;
+    /* background-color:#f0f5f7; */
+    /* margin-left:0px; */
+    outline:none;
+    border:none;
+    padding-left:10px;
+    /* border-radius: 10px; */
+    /* margin-bottom:10px; */
+    margin-top: 30px;
+
+}
+.btn-company{
+    /* display: flex; */
+    background-color: #1451a4;
+    margin-left: 0%;
+    justify-content: center;
+    width: 95%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #f0f5f7;
+    font-size: large;
+}
