@@ -14,78 +14,40 @@
     </div>
 
     <!--------------- SEARCH BAR AND JOB SERACH WITH LOACTION CODE---------------- -->
-    <form class="form-search filter-listing-form-wrapper">
-        <div class="filter-listing-form horizontal">
-            <div class="main-inner clearfix">
+    <div data-aos="fade-up"
+    data-aos-duration="3000">
+    <form class="form-search">
+        <div class="filter-listing-form">
+            <div class="main-inner">
                 <div class="content-main-inner">
                     <div class="row">
-                        <div class="col-xs-12 col-md-5 has-border">
-                            <div class="form-group form-group-title  ">
-                                <div class="form-group-inner inner has-icon">
-                                    <i class="flaticon-magnifiying-glass"></i>
-                                    <input type="text" name="filter-title" class="form-control " value=""
-                                        id="YLWI8_title" placeholder="Job title, keywords">
-                                </div>
-                            </div><!-- /.form-group -->
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input type="text" name="filter-title" class="form-control" placeholder="Job title, keywords" id="one">
+                                <span class="icon"><i class="fas fa-search"></i></span>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-md-4 ">
-                            <div class="form-group form-group-location   tax-select-field">
-                                <div class="form-group-inner inner has-icon">
-                                    <i class="flaticon-location"></i>
-                                    <select name="filter-location" class="form-control select2-hidden-accessible"
-                                        id="YLWI8_location" data-placeholder="City or postcode" tabindex="-1"
-                                        aria-hidden="true">
-
-                                        <option value="">City or postcode</option>
-
-                                    </select><span class="select2 select2-container select2-container--default"
-                                        dir="ltr" style="width: 100%;"><span class="selection"><span
-                                                class="select2-selection select2-selection--single" aria-haspopup="true"
-                                                aria-expanded="false" tabindex="0"
-                                                aria-labelledby="select2-YLWI8_location-container" role="combobox"><span
-                                                    class="select2-selection__rendered"
-                                                    id="select2-YLWI8_location-container" role="textbox"
-                                                    aria-readonly="true"><span
-                                                        class="select2-selection__placeholder"></span></span><span
-                                                    class="select2-selection__arrow" role="presentation"><b
-                                                        role="presentation"></b></span></span></span><span
-                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                </div>
-                            </div><!-- /.form-group -->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="filter-location" class="form-control" id="two">
+                                    <option value="">City or postcode</option>
+                                    <option value="136">Florida</option>
+                                    <option value="52">London</option>
+                                    <option value="53">Los Angeles</option>
+                                    <!-- Add more options here -->
+                                </select>
+                                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
                         </div>
-                        <div class="wrapper-submit flex-middle col-xs-12 col-md-3">
-
-                            <button class="btn-submit btn btn-theme btn-inverse" type="submit">
-                                Find Jobs </button>
+                        <div class="col-md-3">
+                            <button class="btn-submit" type="submit">Find Jobs</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-        <div class="content-trending">
-            <p>Popular Search:&nbsp;&nbsp; <span style="color: grey;">Designer, Developer, Web, IOS, PHP, Senior
-                    Engineer</span></p>
-        </div>
-        <!-- <div class="content-trending">
-            <ul class="trending-keywords">
-                <li class="title">Popular Searches : </li>
-                <li class="item"><a href="">Designer</a></li>
-                <li class="item"><a href="">Developer</a>
-                </li>
-                <li class="item"><a href="">Web</a>
-                </li>
-                <li class="item"><a href="">IOS</a>
-                </li>
-                <li class="item"><a href="">PHP</a>
-                </li>
-                <li class="item"><a href="">Senior</a></li>
-                <li class="item"><a href="">Engineer</a></li>
-            </ul>
-        </div> -->
     </form>
+</div>
 
 
     <!---------------END OF  SEARCH BAR AND JOB SERACH WITH LOACTION CODE---------------- -->

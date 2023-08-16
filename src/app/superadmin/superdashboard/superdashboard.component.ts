@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-superdashboard',
+  selector: 'app-root',
   templateUrl: './superdashboard.component.html',
   styleUrls: ['./superdashboard.component.css']
 })
