@@ -13,13 +13,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login/login.component';
+
 import { SuperadminRoutingModule } from './superadmin/superadmin-routing.module';
+import { AddroleComponent } from './superadmin/pages/addrole/addrole.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent   
+    LoginComponent,
   ],
   imports: [
+    AddroleComponent,
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
