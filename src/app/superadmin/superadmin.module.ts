@@ -7,12 +7,15 @@ import { SuperfooterComponent } from './superfooter/superfooter.component';
 import { ApplicantjobsComponent } from './pages/applicantjobs/applicantjobs.component';
 import { RouterModule } from '@angular/router';
 import { SuperadminRoutingModule } from './superadmin-routing.module';
+
+import {FormsModule} from '@angular/forms';
+
+import { LoginComponent } from '../login/login/login.component';
 import { AddroleComponent } from './pages/addrole/addrole.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { AdduserComponent } from './pages/adduser/adduser.component';
 
 
 
@@ -23,6 +26,14 @@ import { AdduserComponent } from './pages/adduser/adduser.component';
     SupersidenavComponent,
     SuperdashboardComponent,
     SuperfooterComponent,
+
+    ApplicantjobsComponent , 
+  ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    SuperadminRoutingModule
     ApplicantjobsComponent,
     // AddroleComponent  
     AdduserComponent  

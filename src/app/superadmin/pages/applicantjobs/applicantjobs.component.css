@@ -1,6 +1,11 @@
 .content-container {
-    position: relative;
+    /* position: relative;
     padding-top: 0%;
+    left: 0;
+    width: 100%; */
+    top: 0%;
+    margin-top: -22%;  
+     padding-top: 0%;
     left: 0;
     width: 100%;
 }
@@ -13,6 +18,9 @@
     align-items: center;
     height: 100vh;
     text-align: center;
+  }
+  h2{
+    font-size: 40px;
   }
 
   .inner .number-count{
