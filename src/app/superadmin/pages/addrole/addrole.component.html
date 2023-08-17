@@ -1,0 +1,62 @@
+<div class="card">
+    <div class="middle">
+
+
+        <h4 class="role">Assign Role/Permission</h4>
+
+        <br />
+        <div class="drop1">
+            <div class="cmb-th">
+                <label class="_job_tag">Add Roles</label>
+                <br />
+                <input type="text" class="regular-text" value="">
+                <button type="button" class="btn btn-primary" style="width: 100px; margin-left: 10px;"> Save </button>
+            </div>
+            <div class="cmb-th">
+                <label class="_job_tag">Add Permission</label>
+                <br />
+                <input type="text" class="regular-text" value="">
+                <button type="button" class="btn btn-primary" style="width: 100px; margin-left: 10px;"> Save </button>
+            </div>
+        </div>
+        <br />
+        <div class="drop">
+            <div class="addRole">
+                <h4 style="font-weight: bold;">Role</h4>
+                <mat-form-field>
+                    <mat-label> Add Role</mat-label>
+                    <mat-select>
+                        <input type="text" class="form-control" placeholder="Search Role"
+                            (input)="onSearchs($any($event).target.value)">
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let role of roles" [value]="role.id">
+                            {{role.role}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+
+
+            <div class="">
+                <h4 style="font-weight: bold;">Permission</h4>
+                <mat-form-field>
+                    <mat-label>Add Permission</mat-label>
+                    <mat-select>
+                        <input type="text" class="form-control" placeholder="Search Permission"
+                            (input)="onSearch($any($event).target.value)">
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let permission of permissions" [value]="permission.id">
+                            {{permission.permisson}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+
+
+
+        <button type="button" class="btn btn-primary" style="width: 150px; margin-left: 45%; margin-top: 10%; "> Submit
+        </button>
+    </div>
+</div>
