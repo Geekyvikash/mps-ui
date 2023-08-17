@@ -8,7 +8,6 @@ import { ApplicantjobsComponent } from './pages/applicantjobs/applicantjobs.comp
 import { RouterModule } from '@angular/router';
 import { SuperadminRoutingModule } from './superadmin-routing.module';
 
-import {FormsModule} from '@angular/forms';
 
 import { LoginComponent } from '../login/login/login.component';
 import { AddroleComponent } from './pages/addrole/addrole.component';
@@ -26,18 +25,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     SupersidenavComponent,
     SuperdashboardComponent,
     SuperfooterComponent,
-
     ApplicantjobsComponent , 
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule,
-    SuperadminRoutingModule
-    ApplicantjobsComponent,
-    // AddroleComponent  
-    AdduserComponent  
-  ],
+
   imports: [
     CommonModule,
     SuperadminRoutingModule,
@@ -46,7 +36,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule,
-    NgFor
+    NgFor,
+    RouterModule
 
     // RouterModule.forChild(SuperdashboardComponent)
   ],

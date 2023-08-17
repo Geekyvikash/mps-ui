@@ -11,10 +11,7 @@ const routes: Routes = [
   {path:'',component:DashboardComponent, loadChildren:()=> import('./dashboard/dashboard.module').then(m => m.DashboardModule)},
   {path:'superadmin',component:SuperdashboardComponent, loadChildren:()=> import('./superadmin/superadmin.module').then(m => m.SuperadminModule)},
   {path:'login',component:LoginComponent},
-  {path:'role',component:AddroleComponent}
-
-
-
+  {path:'role',component:AddroleComponent},
   {path:'adduser',component:AdduserComponent}
 ]
 
