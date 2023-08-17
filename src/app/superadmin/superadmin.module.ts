@@ -7,6 +7,7 @@ import { SuperfooterComponent } from './superfooter/superfooter.component';
 import { ApplicantjobsComponent } from './pages/applicantjobs/applicantjobs.component';
 import { RouterModule } from '@angular/router';
 import { SuperadminRoutingModule } from './superadmin-routing.module';
+import { AdduserComponent } from './pages/adduser/adduser.component';
 
 
 
@@ -16,7 +17,8 @@ import { SuperadminRoutingModule } from './superadmin-routing.module';
     SupersidenavComponent,
     SuperdashboardComponent,
     SuperfooterComponent,
-    ApplicantjobsComponent  
+    ApplicantjobsComponent,
+    AdduserComponent  
   ],
   imports: [
     CommonModule,
