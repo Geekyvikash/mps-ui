@@ -12,6 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AdduserComponent } from './pages/adduser/adduser.component';
+
 
 
 
@@ -23,6 +25,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     SuperfooterComponent,
     ApplicantjobsComponent,
     // AddroleComponent  
+    AdduserComponent  
   ],
   imports: [
     CommonModule,
