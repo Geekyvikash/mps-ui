@@ -7,6 +7,9 @@ import { SuperfooterComponent } from './superfooter/superfooter.component';
 import { ApplicantjobsComponent } from './pages/applicantjobs/applicantjobs.component';
 import { RouterModule } from '@angular/router';
 import { SuperadminRoutingModule } from './superadmin-routing.module';
+import {FormsModule} from '@angular/forms';
+
+import { LoginComponent } from '../login/login/login.component';
 
 
 
@@ -16,10 +19,12 @@ import { SuperadminRoutingModule } from './superadmin-routing.module';
     SupersidenavComponent,
     SuperdashboardComponent,
     SuperfooterComponent,
-    ApplicantjobsComponent  
+    ApplicantjobsComponent , 
   ],
   imports: [
     CommonModule,
+    RouterModule,
+    FormsModule,
     SuperadminRoutingModule
     // RouterModule.forChild(SuperdashboardComponent)
   ],

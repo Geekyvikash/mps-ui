@@ -83,33 +83,37 @@
                         class="ti-power-off" class="fa fa-power-off" style="font-size:18px"></i>&nbsp;Logout</a></li>
 
         </ul> -->
+        
+        
+        
         <div class="sidebar" [class.sidebar-close]="!openSidebar">
-            <!-- <div class="logo-details">
-              <div class="logo"></div>
-            </div> -->
+            
             <ul class="nav-links" id="nav-links">
-              <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active"  style="border-radius: 10px;">
-                <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
-                  <a >
-                    <i [class]="item.icon" style="color: black;"></i>
-                    <span class="link_name">{{item.link_name}}</span>
-                  </a>
-                </div>
-                <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
-                  <a>
-                    <i [class]="item.icon" style="color: black;"></i>
-                    <span class="link_name">{{item.link_name}}</span>
-                  </a>
-                  <i class="fa fa-caret-down arrow"></i>
-                </div>
-                <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
-                  <li><a class="link_name">{{item.link_name}}</a></li>
-                  <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
-                    <a >{{item_sub.link_name}}</a>
-                  </li>
-                </ul>
-              </li>
+                <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active"
+                    [routerLink]="['/super/applicant']" style="border-radius: 10px;">
+                    <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+                        <a>
+                            <i [class]="item.icon" style="color: black;"></i>
+                            <span class="link_name">{{item.link_name}}</span>
+                        </a>
+                    </div>
+                    <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
+                        <a>
+                            <i [class]="item.icon" style="color: black;"></i>
+                            <span class="link_name">{{item.link_name}}</span>
+                        </a>
+                        <i class="fa fa-caret-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
+                        <li><a class="link_name">{{item.link_name}}</a></li>
+                        <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+                            <a>{{item_sub.link_name}}</a>
+                        </li>
+                    </ul>
+
+
+                </li>
             </ul>
-          </div>
+        </div>
     </nav>
 </aside>

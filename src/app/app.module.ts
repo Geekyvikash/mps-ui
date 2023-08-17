@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login/login.component';
+import { SuperadminRoutingModule } from './superadmin/superadmin-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LoginComponent } from './login/login/login.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    SuperadminRoutingModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
