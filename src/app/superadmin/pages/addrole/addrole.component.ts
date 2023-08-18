@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatListModule } from '@angular/material/list';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-addrole',
   templateUrl: './addrole.component.html',
   standalone: true,
   styleUrls: ['./addrole.component.css'],
-  imports: [MatFormFieldModule, MatSelectModule, NgFor, MatInputModule, FormsModule],
+  imports: [MatFormFieldModule, MatSelectModule, NgFor, MatInputModule, FormsModule, CommonModule, MatListModule],
 })
 export class AddroleComponent {
 

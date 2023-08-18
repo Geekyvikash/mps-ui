@@ -1,24 +1,21 @@
 <div class="card">
     <div class="middle">
-
-
-        <h4 class="role">Assign Role/Permission</h4>
-
-        <br />
-        <div class="drop1">
+        <h4 class="role">Add Role/Permission</h4>
+        <div class="form">
             <div class="cmb-th">
-                <label class="_job_tag">Add Roles</label>
+                <label class="_job_tag">Add Roles<span class="required">*</span></label>
                 <br />
                 <input type="text" class="regular-text" value="">
-                <button type="button" class="btn btn-primary" style="width: 100px; margin-left: 10px;"> Save </button>
+                <button type="button" class="btn btn-primary" style="width: 80px; margin-left: 10px;"> Save </button>
             </div>
             <div class="cmb-th">
-                <label class="_job_tag">Add Permission</label>
+                <label class="_job_tag">Add Permission<span class="required">*</span></label>
                 <br />
                 <input type="text" class="regular-text" value="">
-                <button type="button" class="btn btn-primary" style="width: 100px; margin-left: 10px;"> Save </button>
+                <button type="button" class="btn btn-primary" style="width: 80px; margin-left: 10px;"> Save </button>
             </div>
         </div>
+        <h4 class="role">Assign Role/Permission</h4>
         <br />
         <div class="drop">
             <div class="addRole">
@@ -35,9 +32,6 @@
                     </mat-select>
                 </mat-form-field>
             </div>
-
-
-
             <div class="">
                 <h4 style="font-weight: bold;">Permission</h4>
                 <mat-form-field>
@@ -52,11 +46,17 @@
                     </mat-select>
                 </mat-form-field>
             </div>
+            <button type="button" class="btn btn-primary"
+                style=" height: 40px; width: 80px; margin-top: 50px; margin-right: 20px;"> Submit
+            </button>
         </div>
-
-
-
-        <button type="button" class="btn btn-primary" style="width: 150px; margin-left: 45%; margin-top: 10%; "> Submit
-        </button>
+        <div class="list">
+            <h2 class="head">Lists</h2>
+            <mat-list class="item">
+                <mat-list-item>S.No</mat-list-item>
+                <mat-list-item>Role</mat-list-item>
+                <mat-list-item>Permission</mat-list-item>
+            </mat-list>
+        </div>
     </div>
 </div>

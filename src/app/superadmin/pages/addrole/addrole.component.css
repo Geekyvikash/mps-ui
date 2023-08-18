@@ -1,9 +1,8 @@
 .card {
-    /* margin: 60px; */
     padding: 0px;
     border: 2px;
     width: 100%;
-    height: 100%;
+    height: 150%;
     background-color: #f0f5f7;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -13,7 +12,7 @@
 
     .role {
         font-weight: bold;
-        margin-left: 42%;
+        margin-left: 6%;
         margin-top: 5%;
     }
 
@@ -22,6 +21,7 @@
 .addRole{
     /* margin-left: -15%; */
     margin-left: 1px;
+    
 
     
 }
@@ -29,12 +29,21 @@
 
 .drop {
     display: flex;
-    justify-content: space-around;
-    margin-left: -80px;
+    justify-content: space-between;
+    margin-left: 50px;
 }
 .drop1 {
     display: flex;
     justify-content: space-around;
+}
+
+.cmb-th{
+    color: #222;
+    float: left;
+    font-weight: 600;
+    padding: 20px 10px 20px 0;
+    vertical-align: top;
+    /* width: 200px; */
 }
 /* .button {
     font-weight: bold;
@@ -46,16 +55,77 @@
     margin-top: 25px;
 } */
 
-
-
-._job_tag {
-    margin-left: 15px;
-    font-weight: bold;
+.middle{
+     /* margin: 60px; */
+     padding: 20px;
+     border: 2px;
+     left: 20px;
+     width: 65%;
+     height: 100%;
+     margin-left: 200px;
+     height: 80%;
+     background-color: white;
+     border-radius: 10px;
+     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+     display: flex;
+     flex-direction: column;
 }
 
+._job_tag {
+    /* margin-left: 15px; */
+    /* font-weight: bold; */
+    margin-left: 50px;
+    color: #222;
+    float: left;
+    font-weight: 600;
+    padding: 10px 10px 0px 0;
+    vertical-align: top;
+    /* width: 200px; */
+
+}
+.required{
+    color: red;
+}
 .regular-text{
     border-radius: 5px;
     height: 40px;
     width: 250px;
-    margin-left: 15px;
+    margin-left: 50px;
+    border: 1px solid #F0F5F7;
+    padding: 5px 20px;
+    font-size: 15px;
+    background: #F0F5F7;
+    /* width: 100% !important; */
+    color: #696969;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 50px;
+}
+
+
+.list {
+    font-weight: bold;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    margin-left: -40px;
+
+}
+
+.head{
+    margin-left: -30px;
+
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
 }
